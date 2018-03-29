@@ -71,7 +71,7 @@ class asset(models.Model):
     #################
 
     hostname = models.CharField(max_length=64, verbose_name='主机名', null=True,blank=True)
-    network_ip = models.GenericIPAddressField(verbose_name='外网IP',unique=True)
+    network_ip = models.GenericIPAddressField(verbose_name='外网IP',null=True, blank=True)  # remove unique   ,add blank
     manage_ip = models.GenericIPAddressField(verbose_name='管理IP', null=True,blank=True)
     inner_ip = models.GenericIPAddressField(verbose_name='内网IP', null=True,blank=True)
     port = models.IntegerField(verbose_name='ssh端口', null=True,blank=True,default="22")
@@ -85,7 +85,7 @@ class asset(models.Model):
 
 
     system_user = models.ForeignKey(to="system_users",to_field='id',on_delete=models.SET_NULL, null=True,verbose_name='登陆用户',blank=True)
-    data_center =  models.ForeignKey(to="data_centers",to_field='id',on_delete=models.SET_NULL, null=True,verbose_name='数据中心')
+    data_center =  models.ForeignKey(to="data_centers",to_field='id',on_delete=models.SET_NULL, null=True,verbose_name='数据中心', blank=True) # add blank
     cabinet = models.CharField(max_length=64,verbose_name='机柜',null=True,blank=True)
     # position = models.CharField(max_length=64,verbose_name='位置',null=True,blank=True)
 
@@ -96,10 +96,10 @@ class asset(models.Model):
     disk = models.CharField(max_length=256,verbose_name="硬盘",null=True,blank=True)
     uplink_port = models.CharField(max_length=256,verbose_name="上联端口",null=True,blank=True)
 
-    ship_time = models.DateField(verbose_name="出厂时间",default="1970-01-01")
-    end_time = models.DateField(verbose_name="到保时间",default="1970-01-01")
+    ship_time = models.DateField(verbose_name="出厂时间",default="1970-01-01", blank=True)   #add blank
+    end_time = models.DateField(verbose_name="到保时间",default="1970-01-01", blank=True)   #add blank
 
-    product_line =  models.ForeignKey(to=Group,to_field='id',on_delete=models.SET_NULL,verbose_name='产品线',null=True)
+    product_line =  models.ForeignKey(to=Group,to_field='id',on_delete=models.SET_NULL,verbose_name='产品线',null=True, blank=True)    #add blank
 
 
     is_active = models.BooleanField(default=True, verbose_name=('是否启用'))

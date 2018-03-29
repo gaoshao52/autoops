@@ -5,6 +5,71 @@ import random
 
 
 class asset(models.Model):
+    '''
+        add item
+        '''
+    assetuid = models.CharField(max_length=64, verbose_name='唯一号', unique=True)  # add
+    sn = models.CharField(max_length=64, verbose_name='序列号', unique=True)  # use
+    asset_number = models.CharField(max_length=64, verbose_name='资产编号', null=True, blank=True)  # add
+    asset_type_choices = (
+        ("服务器", "服务器"),
+        ("交换机", "交换机"),
+    )
+    asset_type = models.CharField(max_length=64, choices=asset_type_choices, verbose_name='资产类型', default="服务器")  # add
+    asset_brand_choices = (
+        ("SystemX 3650M5", "SystemX 3650M5"),
+        ("ThinkServer RD630", "ThinkServer RD630"),
+        ("ThinkServer RD640", "ThinkServer RD640"),
+        ("ThinkServer RD650", "ThinkServer RD650"),
+        ("ThinkServer RD430", "ThinkServer RD430"),
+    )
+    asset_brand = models.CharField(max_length=64, choices=asset_brand_choices, verbose_name='资产品牌',
+                                   default="SystemX 3650M5")  # add
+    room_choices = (
+        ("A1", "A1"),
+        ("D2", "D2"),
+        ("B201", "B201"),
+        ("B211", "B211"),
+        ("C1", "C1"),
+    )
+    room = models.CharField(max_length=64, choices=room_choices, verbose_name='机房', null=True)  # add
+    position = models.CharField(max_length=64, verbose_name='位置', null=True)  # use
+    status_choices = (
+        ("闲置", "闲置"),
+        ("在用", "在用"),
+    )
+    status = models.CharField(max_length=64, choices=status_choices, verbose_name='状态', default="闲置")  # add
+    buy_time = models.DateField(verbose_name="购买时间", default="1970-01-01")  # add
+    free_repair = models.CharField(max_length=64, verbose_name='保修期', null=True, blank=True)  # add
+    person_incharge_choices = (
+        ("冷显慧", "冷显慧"),
+        ("高绍阳", "高绍阳"),
+        ("李福鑫", "李福鑫"),
+        ("于晓辉", "于晓辉"),
+    )
+    person_incharge = models.CharField(max_length=64, choices=person_incharge_choices, verbose_name='挂账人',
+                                       default="冷显慧")  # add
+    # person_ops = models.CharField(max_length=64, verbose_name='运维负责人', null=True, blank=True)  # add
+    project = models.CharField(max_length=64, verbose_name='项目', null=True, blank=True)  # add
+    team_choices = (
+        ("高瞻", "高瞻"),
+        ("刘军", "刘军"),
+        ("马亮亮", "马亮亮"),
+    )
+    team = models.CharField(max_length=64, choices=team_choices, verbose_name='团队', null=True, blank=True)  # add
+    role = models.CharField(max_length=64, verbose_name='角色', null=True, blank=True)  # add
+    use_man_choices = (
+        ("王正浩", "王正浩"),
+        ("宋晓丽", "宋晓丽"),
+    )
+    use_man = models.CharField(max_length=64, choices=use_man_choices, verbose_name='使用人', null=True, blank=True)  # add
+    remark = models.CharField(max_length=64, verbose_name='备注', null=True, blank=True)  # add
+
+    give_time = models.DateField(verbose_name="外借时间", null=True, blank=True)  # add
+    back_time = models.DateField(verbose_name="归还时间", null=True, blank=True)  # add
+
+    #################
+
     hostname = models.CharField(max_length=64, verbose_name='主机名', null=True,blank=True)
     network_ip = models.GenericIPAddressField(verbose_name='外网IP',unique=True)
     manage_ip = models.GenericIPAddressField(verbose_name='管理IP', null=True,blank=True)
@@ -22,10 +87,10 @@ class asset(models.Model):
     system_user = models.ForeignKey(to="system_users",to_field='id',on_delete=models.SET_NULL, null=True,verbose_name='登陆用户',blank=True)
     data_center =  models.ForeignKey(to="data_centers",to_field='id',on_delete=models.SET_NULL, null=True,verbose_name='数据中心')
     cabinet = models.CharField(max_length=64,verbose_name='机柜',null=True,blank=True)
-    position = models.CharField(max_length=64,verbose_name='位置',null=True,blank=True)
+    # position = models.CharField(max_length=64,verbose_name='位置',null=True,blank=True)
 
 
-    sn = models.CharField(max_length=64,verbose_name='序列号',null=True,blank=True)
+    # sn = models.CharField(max_length=64,verbose_name='序列号',null=True,blank=True)
     cpu = models.CharField(max_length=64,verbose_name='CPU',null=True,blank=True)
     memory = models.CharField(max_length=64, verbose_name='内存', null=True,blank=True)
     disk = models.CharField(max_length=256,verbose_name="硬盘",null=True,blank=True)

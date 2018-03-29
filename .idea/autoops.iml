@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="django" name="Django">
+      <configuration>
+        <option name="rootFolder" value="$MODULE_DIR$" />
+        <option name="settingsModule" value="autoops/settings.py" />
+        <option name="manageScript" value="$MODULE_DIR$/manage.py" />
+        <option name="environment" value="&lt;map/&gt;" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="jdk" jdkName="Python 3.6.4 (C:\Program Files\Python36\python.exe)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="cmdb" />
+    <orderEntry type="module" module-name="apps" />
+    <orderEntry type="module" module-name="web" />
+    <orderEntry type="module" module-name="python-lianxi" />
+    <orderEntry type="module" module-name="cmdb" />
+    <orderEntry type="module" module-name="Static_Full_Version汉化" />
+    <orderEntry type="module" module-name="Yearning" />
+    <orderEntry type="module" module-name="hequan2017.github.io" />
+    <orderEntry type="module" module-name="autoops.github.io" />
+    <orderEntry type="module" module-name="hequan2017.github.io" />
+    <orderEntry type="module" module-name="autoops-docs" />
+    <orderEntry type="module" module-name="webssh" />
+  </component>
+  <component name="TemplatesService">
+    <option name="TEMPLATE_CONFIGURATION" value="Django" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="projectConfiguration" value="py.test" />
+    <option name="PROJECT_TEST_RUNNER" value="py.test" />
+  </component>
+</module>

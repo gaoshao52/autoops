@@ -21,8 +21,10 @@ class BaseSetting(object):
 
 @xadmin.sites.register(asset)
 class assets(object):
-    search_fields = ('network_ip', 'manage_ip',)  ## 定义搜索框以哪些字段可以搜索
-    list_display = ('model', 'network_ip', 'manage_ip', 'data_center', 'sn',)  # 每行的显示信息
+    # search_fields = ('network_ip', 'manage_ip',)  ## 定义搜索框以哪些字段可以搜索
+    # list_display = ('model', 'network_ip', 'manage_ip', 'data_center', 'sn',)  # 每行的显示信息
+    search_fields = ('project', 'team', 'use_man', 'room', 'position', 'status', 'asset_brand')  ## 定义搜索框以哪些字段可以搜索
+    list_display = ('assetuid', 'project', 'team', 'use_man', 'room', 'position', 'status', 'asset_brand')  # 每行的显示信息
     list_display_links = ('model',)
     list_filter = ("product_line",)
 

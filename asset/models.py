@@ -8,7 +8,7 @@ class asset(models.Model):
     '''
         add item
         '''
-    assetuid = models.CharField(max_length=64, verbose_name='唯一号', unique=True)  # add
+    assetuid = models.CharField(max_length=64, verbose_name='唯一号', unique=True, default="1")  # add
     sn = models.CharField(max_length=64, verbose_name='序列号', unique=True)  # use
     asset_number = models.CharField(max_length=64, verbose_name='资产编号', null=True, blank=True)  # add
     asset_type_choices = (

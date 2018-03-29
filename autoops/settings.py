@@ -7,7 +7,7 @@ import djcelery
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'mo2+&!_l_7z0ty4%e75a#gdf%*&es4p6n$y90xk=18uao*&8*y'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*', ]
 
@@ -176,7 +176,7 @@ MEDIA_URL = '/upload/'  # 这个是在浏览器上访问该上传文件的url的
 
 
 
-Webssh_ip = '114.115.132.147'        ##WebSSH 软件的 访问IP,也就是本机外网IP，改这个地方就好了。
+Webssh_ip = '0.0.0.0'        ##WebSSH 软件的 访问IP,也就是本机外网IP，改这个地方就好了。
 Webssh_port='9000'              ##端口号,默认即可。如有修改，也需要修改  webssh/main.py文件   define('port', default=9000, help='listen port', type=int)
 
 Inception_ip = '127.0.0.1'                  ## 此为 Inception 软件地址,  默认为本机地址，一般不用修改

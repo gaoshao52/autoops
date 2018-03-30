@@ -18,10 +18,14 @@ class asset(models.Model):
     asset_type = models.CharField(max_length=64, choices=asset_type_choices, verbose_name='资产类型', default="服务器")  # add
     asset_brand_choices = (
         ("SystemX 3650M5", "SystemX 3650M5"),
+        ("ThinkSystem SR650", "ThinkSystem SR650"),
         ("ThinkServer RD630", "ThinkServer RD630"),
         ("ThinkServer RD640", "ThinkServer RD640"),
         ("ThinkServer RD650", "ThinkServer RD650"),
         ("ThinkServer RD430", "ThinkServer RD430"),
+        ("ThinkServer RD530", "ThinkServer RD530"),
+        ("ThinkServer RD350", "ThinkServer RD350"),
+        ("万全 R520", "万全 R520"),
     )
     asset_brand = models.CharField(max_length=64, choices=asset_brand_choices, verbose_name='资产品牌',
                                    default="SystemX 3650M5")  # add

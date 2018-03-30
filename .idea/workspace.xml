@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67737d46-33e6-4812-afe5-af3f3b5c4dc0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/asset/asset.html" afterPath="$PROJECT_DIR$/templates/asset/asset.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -49,8 +48,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/asset/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="70" column="13" lean-forward="false" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="13" />
+            <state relative-caret-position="495">
+              <caret line="66" column="88" lean-forward="false" selection-start-line="66" selection-start-column="85" selection-end-line="66" selection-end-column="88" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -61,8 +60,8 @@
       <file leaf-file-name="asset.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/asset/asset.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="146" column="92" lean-forward="false" selection-start-line="146" selection-start-column="92" selection-end-line="146" selection-end-column="92" />
+            <state relative-caret-position="75">
+              <caret line="107" column="47" lean-forward="false" selection-start-line="107" selection-start-column="47" selection-end-line="107" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -1062,8 +1061,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/asset/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="70" column="13" lean-forward="false" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="13" />
+        <state relative-caret-position="495">
+          <caret line="66" column="88" lean-forward="false" selection-start-line="66" selection-start-column="85" selection-end-line="66" selection-end-column="88" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -1072,8 +1071,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/asset/asset.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="146" column="92" lean-forward="false" selection-start-line="146" selection-start-column="92" selection-end-line="146" selection-end-column="92" />
+        <state relative-caret-position="75">
+          <caret line="107" column="47" lean-forward="false" selection-start-line="107" selection-start-column="47" selection-end-line="107" selection-end-column="47" />
           <folding />
         </state>
       </provider>

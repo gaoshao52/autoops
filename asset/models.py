@@ -80,6 +80,7 @@ class asset(models.Model):
         ("吴娟", "吴娟"),
         ("张剑鸣", "张剑鸣"),
         ("高绍阳", "高绍阳"),
+        ("高菁华", "高菁华"),
 
     )
     use_man = models.CharField(max_length=64, choices=use_man_choices, verbose_name='使用人', null=True, blank=True)  # add

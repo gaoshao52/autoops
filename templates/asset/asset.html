@@ -91,12 +91,24 @@
                                     <thead>
                                     <tr>
                                         <th width="20"><input type="checkbox" id="CheckedAll"></th>
-                                        <th>外网IP</th>
-                                        <th>管理IP</th>
-                                        <th>产品线</th>
+                                        <th>唯一号</th>
+                                        <th>序列号</th>
+                                        <th>资产编号</th>
+                                        <th>资产类型</th>
+                                        <th>资产品牌</th>
+                                        <th>机房</th>
                                         <th>位置</th>
-                                        <th>型号</th>
-                                        <th>SN</th>
+                                        <th>状态</th>
+                                        <th>购买时间</th>
+                                        <th>保修期</th>
+                                        <th>挂账人</th>
+                                        <th>项目</th>
+                                        <th>团队</th>
+                                        <th>角色</th>
+                                        <th>团队</th>
+                                        <th>使用人</th>
+                                        <th>外借时间</th>
+                                        <th>归还时间</th>
                                         <th>动作{{ error_performance }}</th>
                                     </tr>
                                     </thead>
@@ -107,20 +119,32 @@
                                         <tr class="gradeA" id="{{ row.id }}">
                                             <td><input type="checkbox" value="{{ row.id }}" name="id"></td>
                                             <td class="center"><a
-                                                    href="{% url  "asset:asset_detail"   pk=row.id %}">{{ row.network_ip }}</a>
+                                                    href="{% url  'asset:asset_detail'   pk=row.id %}">{{ row.assetuid }}</a>
                                             </td>
-                                            <td class="center">{{ row.manage_ip }}</td>
-                                            <td class="center">{{ row.product_line.name }}</td>
-                                            <td class="center">{{ row.cabinet }} {{ row.position }}</td>
-                                            <td class="center">{{ row.model }}</td>
                                             <td class="center">{{ row.sn }}</td>
+                                            <td class="center">{{ row.asset_number }}</td>
+                                            <td class="center">{{ row.asset_type }}</td>
+                                            <td class="center">{{ row.asset_brand }}</td>
+                                            <td class="center">{{ row.room }}</td>
+                                            <td class="center">{{ row.position }}</td>
+                                            <td class="center">{{ row.status }}</td>
+                                            <td class="center">{{ row.buy_time }}</td>
+                                            <td class="center">{{ row.free_repair }}</td>
+                                            <td class="center">{{ row.person_incharge }}</td>
+                                            <td class="center">{{ row.project }}</td>
+                                            <td class="center">{{ row.team }}</td>
+                                            <td class="center">{{ row.role }}</td>
+                                            <td class="center">{{ row.use_man }}</td>
+                                            <td class="center">{{ row.remark }}</td>
+                                            <td class="center">{{ row.give_time }}</td>
+                                            <td class="center">{{ row.back_time }}</td>
                                             <td><a class="btn btn-primary  btn-xs "
-                                                   href="{%   url  "asset:asset_update"  pk=row.id %}">编辑</a>
+                                                   href="{%   url  'asset:asset_update'  pk=row.id %}">编辑</a>
                                                 <a class="btn btn-danger  btn-xs  asset_del_1" data-toggle="modal"
                                                    data-target="#myModal1">删除
                                                 </a>
                                                 <a class="btn btn-primary  btn-xs "
-                                                   href="{% url    "asset:asset_performance"   row.id %}">性能</a>
+                                                   href="{% url    'asset:asset_performance'   row.id %}">性能</a>
                                                 <a type="button" class="btn btn-primary btn-xs webssh" >终端
                                                 </a>
 

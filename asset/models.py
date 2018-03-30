@@ -46,6 +46,8 @@ class asset(models.Model):
         ("高绍阳", "高绍阳"),
         ("李福鑫", "李福鑫"),
         ("于晓辉", "于晓辉"),
+        ("常井志", "常井志"),
+        ("高菁华", "高菁华"),
         ("外借", "外借"),
         ("无法查找", "无法查找"),
     )
@@ -57,12 +59,24 @@ class asset(models.Model):
         ("高瞻", "高瞻"),
         ("刘军", "刘军"),
         ("马亮亮", "马亮亮"),
+        ("Betty", "Betty"),
+        ("张剑鸣", "张剑鸣"),
+        ("吴娟", "吴娟"),
+        ("AI", "AI"),
     )
     team = models.CharField(max_length=64, choices=team_choices, verbose_name='团队', null=True, blank=True)  # add
     role = models.CharField(max_length=64, verbose_name='角色', null=True, blank=True)  # add
     use_man_choices = (
         ("王正浩", "王正浩"),
         ("宋晓丽", "宋晓丽"),
+        ("马亮亮", "马亮亮"),
+        ("高瞻", "高瞻"),
+        ("张浩南", "张浩南"),
+        ("杨碧波", "杨碧波"),
+        ("吴娟", "吴娟"),
+        ("张剑鸣", "张剑鸣"),
+        ("高绍阳", "高绍阳"),
+
     )
     use_man = models.CharField(max_length=64, choices=use_man_choices, verbose_name='使用人', null=True, blank=True)  # add
     remark = models.CharField(max_length=64, verbose_name='备注', null=True, blank=True)  # add

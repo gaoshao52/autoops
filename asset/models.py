@@ -46,6 +46,8 @@ class asset(models.Model):
         ("高绍阳", "高绍阳"),
         ("李福鑫", "李福鑫"),
         ("于晓辉", "于晓辉"),
+        ("外借", "外借"),
+        ("无法查找", "无法查找"),
     )
     person_incharge = models.CharField(max_length=64, choices=person_incharge_choices, verbose_name='挂账人',
                                        default="冷显慧")  # add

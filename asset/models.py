@@ -35,6 +35,7 @@ class asset(models.Model):
         ("B201", "B201"),
         ("B211", "B211"),
         ("C1", "C1"),
+        ("G6", "G6"),
     )
     room = models.CharField(max_length=64, choices=room_choices, verbose_name='机房', null=True)  # add
     position = models.CharField(max_length=64, verbose_name='位置', null=True)  # use

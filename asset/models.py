@@ -47,6 +47,14 @@ class asset(models.Model):
     buy_time = models.DateField(verbose_name="购买时间", default="1970-01-01")  # add
     free_repair = models.CharField(max_length=64, verbose_name='保修期', null=True, blank=True)  # add
     person_incharge_choices = (
+        ("崔先锋", "崔先锋"),
+        ("邓建", "邓建"),
+        ("方方", "方方"),
+        ("付义展", "付义展"),
+        ("高瞻", "高瞻"),
+        ("韩晓磊", "韩晓磊"),
+        ("孙雷", "孙雷"),
+        ("汤文军", "汤文军"),
         ("冷显慧", "冷显慧"),
         ("高绍阳", "高绍阳"),
         ("李福鑫", "李福鑫"),

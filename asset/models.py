@@ -68,6 +68,12 @@ class asset(models.Model):
         ("张剑鸣", "张剑鸣"),
         ("吴娟", "吴娟"),
         ("AI", "AI"),
+        ("段立功", "段立功"),
+        ("谢刚", "谢刚"),
+        ("李曈", "李曈"),
+        ("李蕾", "李蕾"),
+
+
     )
     team = models.CharField(max_length=64, choices=team_choices, verbose_name='团队', null=True, blank=True)  # add
     role = models.CharField(max_length=64, verbose_name='角色', null=True, blank=True)  # add
@@ -82,6 +88,14 @@ class asset(models.Model):
         ("张剑鸣", "张剑鸣"),
         ("高绍阳", "高绍阳"),
         ("高菁华", "高菁华"),
+        ("段立功", "段立功"),
+        ("崔先锋", "崔先锋"),
+        ("吴刚", "吴刚"),
+        ("刘军", "刘军"),
+        ("李蕾", "李蕾"),
+        ("刘峰", "刘峰"),
+        ("张志正", "张志正"),
+
 
     )
     use_man = models.CharField(max_length=64, choices=use_man_choices, verbose_name='使用人', null=True, blank=True)  # add

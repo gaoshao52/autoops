@@ -24,6 +24,7 @@ class asset(models.Model):
         ("ThinkServer RD650", "ThinkServer RD650"),
         ("ThinkServer RD430", "ThinkServer RD430"),
         ("ThinkServer RD530", "ThinkServer RD530"),
+        ("ThinkServer RD550", "ThinkServer RD550"),
         ("ThinkServer RD350", "ThinkServer RD350"),
         ("万全 R520", "万全 R520"),
     )
@@ -103,6 +104,8 @@ class asset(models.Model):
         ("李蕾", "李蕾"),
         ("刘峰", "刘峰"),
         ("张志正", "张志正"),
+        ("谢刚", "谢刚"),
+        ("胡伟", "胡伟"),
 
 
     )

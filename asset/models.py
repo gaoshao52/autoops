@@ -82,7 +82,6 @@ class asset(models.Model):
         ("李曈", "李曈"),
         ("李蕾", "李蕾"),
 
-
     )
     team = models.CharField(max_length=64, choices=team_choices, verbose_name='团队', null=True, blank=True)  # add
     role = models.CharField(max_length=64, verbose_name='角色', null=True, blank=True)  # add
@@ -106,6 +105,7 @@ class asset(models.Model):
         ("张志正", "张志正"),
         ("谢刚", "谢刚"),
         ("胡伟", "胡伟"),
+        ("陶光庆", "陶光庆"),
 
 
     )

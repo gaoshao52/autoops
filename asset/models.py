@@ -19,6 +19,7 @@ class asset(models.Model):
     asset_brand_choices = (
         ("SystemX 3650M5", "SystemX 3650M5"),
         ("ThinkSystem SR650", "ThinkSystem SR650"),
+        ("ThinkSystem SR358F", "ThinkSystem SR358F"),
         ("ThinkServer RD630", "ThinkServer RD630"),
         ("ThinkServer RD640", "ThinkServer RD640"),
         ("ThinkServer RD650", "ThinkServer RD650"),
@@ -26,7 +27,9 @@ class asset(models.Model):
         ("ThinkServer RD530", "ThinkServer RD530"),
         ("ThinkServer RD550", "ThinkServer RD550"),
         ("ThinkServer RD350", "ThinkServer RD350"),
+        ("HuaWei 2288H V5", "HuaWei 2288H V5"),
         ("万全 R520", "万全 R520"),
+        ("万全 R510", "万全 R510"),
     )
     asset_brand = models.CharField(max_length=64, choices=asset_brand_choices, verbose_name='资产品牌',
                                    default="SystemX 3650M5")  # add
@@ -106,6 +109,9 @@ class asset(models.Model):
         ("谢刚", "谢刚"),
         ("胡伟", "胡伟"),
         ("陶光庆", "陶光庆"),
+        ("郭振辉", "郭振辉"),
+        ("胡伟", "胡伟"),
+        ("孙雷", "孙雷"),
 
 
     )

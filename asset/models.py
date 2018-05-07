@@ -85,6 +85,7 @@ class asset(models.Model):
         ("李曈", "李曈"),
         ("李蕾", "李蕾"),
         ("杨杰", "杨杰"),
+        ("方方", "方方"),
 
     )
     team = models.CharField(max_length=64, choices=team_choices, verbose_name='团队', null=True, blank=True)  # add
